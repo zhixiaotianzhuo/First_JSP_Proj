@@ -1,0 +1,32 @@
+net start mysql;
+
+mysql -uroot -p 1233211234567
+
+use test;
+drop table if exists user;
+create table user(
+userid varchar(30) primary key,
+name varchar(30) not null,
+password varchar(30) not null
+);
+
+insert into user values('hehe','hehe','hehe');
+
+
+
+update user set password=PASSWORD('1233211234567')where name='lan';
+
+
+
+net不是内部或外部命令，也不是可运行的程序或批处理文件的解决办法
+
+
+
+创建新用户 
+
+insert into mysql.user(Host,User,Password) values("localhost","test",password("1234"));
+
+create user'lan@localhost'IDENTIFIED BY'1233211234567';
+create user'you@localhost'IDENTIFIED BY'778899';
+
+update user set password=password("123456") where user="you";
